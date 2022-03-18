@@ -1,7 +1,7 @@
 # Docs file is used for menu structure
 
 - title: Hem
-  url: index.html
+  url: /
 - title: Boka tid
   url: /
 - title: Hitta hit
