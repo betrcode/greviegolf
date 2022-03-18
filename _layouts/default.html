@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: "sv-SE" }}">
 <head>
     <meta charset="UTF-8">
 
     {% seo %}
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script type="application/javascript">
+        /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+        function toggleHamburgerMenu() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -13,7 +29,22 @@
     {% include head-custom.html %}
 </head>
 <body>
-<a id="skip-to-content" href="#content">Hoppa till innehållet.</a>
+<a id="skip-to-content" href="#content">Hoppa till innehållet</a>
+
+<!-- Top Navigation Menu -->
+<div class="topnav">
+    <a href="/" class="active">Grevie Golf</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+        {% for item in site.data.docs %}
+        <a href="{{ item.url }}">{{item.title }}</a>
+        {% endfor %}
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="toggleHamburgerMenu()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
 
 <header class="page-header" role="banner">
     <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>

@@ -1,2 +1,5 @@
 /greviegolf.iml
 /.idea/
+_site/
+vendor/
+.DS_Store
