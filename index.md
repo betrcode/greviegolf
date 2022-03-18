@@ -1,4 +1,4 @@
-## Välkommen till Grevie Golf
+## Grevie Golf
 
 Snart öppnar dörrarna till vår nya anläggning med golfsimulatorer i Grevie!
 
