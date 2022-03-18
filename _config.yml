@@ -1,1 +1,11 @@
+# Site level settings
+
 theme: jekyll-theme-cayman
+
+title: Grevie Golf
+description: Tidsbokning för golfsimulator i Grevie
+
+show_downloads: false
+
+# Example URL https://book.sweetspot.io/clubs/ruff/1000/tee-sheet
+booking_url: https://greviegolf.se
