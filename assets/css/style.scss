@@ -35,12 +35,39 @@
 
 /* Add a grey background color on mouse-over */
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  //background-color: #ddd;
+  //color: black;
 }
 
 /* Style the active link (or home/logo) */
 .active {
   background-color: #159858;
   color: white;
+}
+
+.page-header {
+  color: #fff;
+  text-align: center;
+  background-color: #159957;
+  //background-image: linear-gradient(120deg, #155799, #159957);
+  background-image: linear-gradient(120deg, #ECBD65, #693003);
+}
+
+.btn {
+  //display: inline-block;
+  //margin-bottom: 1rem;
+  //color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(21, 152, 88, 0.99);
+  //border-color: rgba(255, 255, 255, 0.2);
+  //border-style: solid;
+  border-width: 3px;
+  //border-radius: 0.3rem;
+  //transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
+.btn:hover {
+  //color: rgba(13, 194, 106, 0.99);
+  //text-decoration: none;
+  background-color: rgba(13, 194, 106, 0.99);
+  //border-color: rgba(255, 255, 255, 0.3);
 }
