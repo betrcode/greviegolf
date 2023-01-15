@@ -4,20 +4,37 @@ The site is built using Jekyll and runs on GitHub Pages.
 
 ## Running Jekyll locally
 
-Because I am running Python 3 and Ruby 3 (too new), I have to do a bit of a hack to run the site locally: 
+Install `rbenv` to manage having multiple versions of Ruby installed on the machine.
+
+Install Ruby 2.7.4 because GitHub Pages requires it:  https://pages.github.com/versions/
 
 ```
-bundler exec jekyll build && bash -c 'cd _site && python3 -m http.server 3000'
+rbenv install 2.7.4
 ```
 
-...instead of the simpler:
+Use that version in the current dir:
+
+```
+rbenv local 2.7.4
+```
+
+Install Bundler:
+
+```
+gem install bundler:2.3.6
+```
+
+Run Jekyll:
 
 ```
 bundle exec jekyll serve
 ```
 
-GitHub Pages currently requires Ruby 2.7.4 but maybe one day it will work with Ruby 3.
-See: https://pages.github.com/versions/
+Workaround hack to run GitHub pages with Ruby 3 and Python 3:
+
+```
+bundler exec jekyll build && bash -c 'cd _site && python3 -m http.server 3000'
+```
 
 ## CSS
 
